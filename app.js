@@ -55,9 +55,7 @@ app.post("/api/ticket/new", async (req, res) => {
   // };
 
   // const success = await dbConnect.collection("tickets").insertOne(newTicket);
-  // res.sendStatus(200);
-  console.log(req.params);
-  // console.log(success);
+  res.sendStatus(200);
 });
 
 app.post("/api/ticket/update", async (req, res) => {
