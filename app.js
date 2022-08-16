@@ -48,15 +48,16 @@ app.get("/api/tickets", async (req, res) => {
 
 app.post("/api/ticket/new", async (req, res) => {
   const dbConnect = dbo.getDb();
-  const newTicket = {
-    id: "1",
-    subject: "Testing post ticket",
-    description: "Testing testing testing",
-  };
+  // const newTicket = {
+  //   id: "1",
+  //   subject: "Testing post ticket",
+  //   description: "Testing testing testing",
+  // };
 
-  const success = await dbConnect.collection("tickets").insertOne(newTicket);
-  res.sendStatus(200);
-  console.log(success);
+  // const success = await dbConnect.collection("tickets").insertOne(newTicket);
+  // res.sendStatus(200);
+  console.log(req.params);
+  // console.log(success);
 });
 
 app.post("/api/ticket/update", async (req, res) => {
